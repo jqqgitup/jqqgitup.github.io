@@ -90,17 +90,17 @@
       
         <p>ecstore导入时要注意：</p>
 <ol>
-<li>FTP配置：系统－&gt;队列导入导出－&gt;存储方式配置<br><img src="https://img-blog.csdnimg.cn/20181226163120249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3ODI2NzA1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>FTP配置：系统－&gt;队列导入导出－&gt;存储方式配置<br><img src="img/ecstoredaoru1.png" alt="在这里插入图片描述"></li>
 <li><p>执行导入队列：</p>
 <p>/usr/local/php56/bin/php /data/httpd/tnf/script/queue/queuescript.php slow</p>
 </li>
 </ol>
-<p>ps：可在 系统－&gt;队列导入导出－&gt;导出队列 查看任务状态<br><img src="https://img-blog.csdnimg.cn/20181226163518178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3ODI2NzA1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>ps：可在 系统－&gt;队列导入导出－&gt;导出队列 查看任务状态<br><img src="img/ecstoredaoru2.png" alt="在这里插入图片描述"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jqqgitup.github.io/2019/01/09/Ecstore-导入队列执行/" data-id="cjqot6g9j000051z9ocui3r1a" class="article-share-link">Share</a>
+      <a data-url="http://jqqgitup.github.io/2019/01/09/Ecstore-导入队列执行/" data-id="cjqotjj8s000076z9zok6694s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ecstore/">Ecstore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
@@ -143,17 +143,60 @@
 <li>输入命令：ssh -p 22 <a href="mailto:root@123.46.167.91" target="_blank" rel="noopener">root@123.46.167.91</a>  ( ssh -p 端口号 用户名@ip)</li>
 <li>输入密码</li>
 <li><p>接连成功</p>
-<p><img src="https://img-blog.csdnimg.cn/20181227103755877.png" alt="截图"></p>
+<p><img src="img/maczhongduanssh.png" alt="截图"></p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jqqgitup.github.io/2019/01/09/Mac终端连接远程服务器/" data-id="cjqot6g9p000151z9uua1nuig" class="article-share-link">Share</a>
+      <a data-url="http://jqqgitup.github.io/2019/01/09/Mac终端连接远程服务器/" data-id="cjqotjj93000176z9trfthl5j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/终端/">终端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-测试" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/09/测试/" class="article-date">
+  <time datetime="2019-01-09T03:48:03.000Z" itemprop="datePublished">2019-01-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/09/测试/">PHP 随机生成n条手机号</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>直接贴代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//随机生成n条手机号</span></span><br><span class="line"><span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">randomMobile</span><span class="params">($n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $tel_arr = <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">'130'</span>,<span class="string">'131'</span>,<span class="string">'132'</span>,<span class="string">'133'</span>,<span class="string">'134'</span>,<span class="string">'135'</span>,<span class="string">'136'</span>,<span class="string">'137'</span>,<span class="string">'138'</span>,<span class="string">'139'</span>,<span class="string">'144'</span>,<span class="string">'147'</span>,<span class="string">'150'</span>,<span class="string">'151'</span>,<span class="string">'152'</span>,<span class="string">'153'</span>,<span class="string">'155'</span>,<span class="string">'156'</span>,<span class="string">'157'</span>,<span class="string">'158'</span>,<span class="string">'159'</span>,<span class="string">'176'</span>,<span class="string">'177'</span>,<span class="string">'178'</span>,<span class="string">'180'</span>,<span class="string">'181'</span>,<span class="string">'182'</span>,<span class="string">'183'</span>,<span class="string">'184'</span>,<span class="string">'185'</span>,<span class="string">'186'</span>,<span class="string">'187'</span>,<span class="string">'188'</span>,<span class="string">'189'</span>,</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; $n; $i++) &#123;</span><br><span class="line">        $tmp[] = $tel_arr[array_rand($tel_arr)].mt_rand(<span class="number">1000</span>,<span class="number">9999</span>).mt_rand(<span class="number">1000</span>,<span class="number">9999</span>);</span><br><span class="line">        <span class="comment">// $tmp[] = $tel_arr[array_rand($tel_arr)].'xxxx'.mt_rand(1000,9999);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array_unique($tmp);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jqqgitup.github.io/2019/01/09/测试/" data-id="cjqotjj98000476z986sbmsct" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
 
     </footer>
   </div>
@@ -201,52 +244,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jqqgitup.github.io/2019/01/09/hello-world/" data-id="cjqot6g9u000451z9l3rj18d5" class="article-share-link">Share</a>
+      <a data-url="http://jqqgitup.github.io/2019/01/09/hello-world/" data-id="cjqotjj9a000576z9indhf1la" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-测试" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/09/测试/" class="article-date">
-  <time datetime="2019-01-09T03:48:03.000Z" itemprop="datePublished">2019-01-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/PHP/">PHP</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/09/测试/">PHP 随机生成n条手机号</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>直接贴代码：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//随机生成n条手机号</span></span><br><span class="line"><span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">randomMobile</span><span class="params">($n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $tel_arr = <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">'130'</span>,<span class="string">'131'</span>,<span class="string">'132'</span>,<span class="string">'133'</span>,<span class="string">'134'</span>,<span class="string">'135'</span>,<span class="string">'136'</span>,<span class="string">'137'</span>,<span class="string">'138'</span>,<span class="string">'139'</span>,<span class="string">'144'</span>,<span class="string">'147'</span>,<span class="string">'150'</span>,<span class="string">'151'</span>,<span class="string">'152'</span>,<span class="string">'153'</span>,<span class="string">'155'</span>,<span class="string">'156'</span>,<span class="string">'157'</span>,<span class="string">'158'</span>,<span class="string">'159'</span>,<span class="string">'176'</span>,<span class="string">'177'</span>,<span class="string">'178'</span>,<span class="string">'180'</span>,<span class="string">'181'</span>,<span class="string">'182'</span>,<span class="string">'183'</span>,<span class="string">'184'</span>,<span class="string">'185'</span>,<span class="string">'186'</span>,<span class="string">'187'</span>,<span class="string">'188'</span>,<span class="string">'189'</span>,</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; $n; $i++) &#123;</span><br><span class="line">        $tmp[] = $tel_arr[array_rand($tel_arr)].mt_rand(<span class="number">1000</span>,<span class="number">9999</span>).mt_rand(<span class="number">1000</span>,<span class="number">9999</span>);</span><br><span class="line">        <span class="comment">// $tmp[] = $tel_arr[array_rand($tel_arr)].'xxxx'.mt_rand(1000,9999);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array_unique($tmp);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://jqqgitup.github.io/2019/01/09/测试/" data-id="cjqot6g9w000551z9zdyo46qc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
-
     </footer>
   </div>
   
@@ -314,11 +314,11 @@
           </li>
         
           <li>
-            <a href="/2019/01/09/hello-world/">Hello World</a>
+            <a href="/2019/01/09/测试/">PHP 随机生成n条手机号</a>
           </li>
         
           <li>
-            <a href="/2019/01/09/测试/">PHP 随机生成n条手机号</a>
+            <a href="/2019/01/09/hello-world/">Hello World</a>
           </li>
         
       </ul>
